@@ -6,12 +6,18 @@ module.exports = function(app) {
          extended: true
       }));
      
-     app.get('/',function(req,res){
+     app.get('/',function(req,res){ //   url 주소 == /          웹에 주소 입력 되면 index.html을 실행해라
         res.render('index.html')
      });
-     app.get('/about',function(req,res){
+     app.get('/about',function(req,res){  // 중요~         
         res.render('about.html');
     });
+   
+    app.get('/mint',function(req,res){  // 중요~         
+      res.render('mint.html');
+  });
+ 
+
      
     app.get('/listall', function (req, res) {
       //res.render('about.html');
