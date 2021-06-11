@@ -1,160 +1,156 @@
-<!-- 
- index.html - Ethereum Wallet
- Author : Soto Jang (sotolabedu@gmail.com)
- Copyright (c) Sunstar Since 2015. All Rights Reserved. See LICENSE file.
- -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ahleum Web Page</title>
 
-<!Doctype html>
-<html>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+<!--
+Parallo Template
+https://templatemo.com/tm-534-parallo
+-->
+  </head>
+  <body>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/bg-01.jpg">
+      <div class="container-fluid">
+        <div class="row tm-brand-row">
+          <div class="col-lg-4 col-11">
+            <div class="tm-brand-container tm-bg-white-transparent">
+              <i class="fas fa-2x fa-pen tm-brand-icon"></i>
+              <div class="tm-brand-texts">
+                <h1 class="text-uppercase tm-brand-name">Parallo</h1>
+                <p class="small">new app landing page</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-1">
+            <div class="tm-nav">
+              <nav class="navbar navbar-expand-lg navbar-light tm-bg-white-transparent tm-navbar">
+                <button class="navbar-toggler" type="button"
+                  data-toggle="collapse" data-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <div class="tm-nav-link-highlight"></div>
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="tm-nav-link-highlight"></div>
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="tm-nav-link-highlight"></div>
+                      <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="tm-nav-link-highlight"></div>
+                      <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="tm-nav-link-highlight"></div>
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
 
-<head>
-	<meta charset="UTF-8">
+        <section class="row" id="tmHome">
+          <div class="col-12 tm-home-container">
+            <div class="text-white tm-home-left">
+              <p class="text-uppercase tm-slogan">We can develop</p>
+              <hr class="tm-home-hr" />
+              <h2 class="tm-home-title">Mobile App for Your Business</h2>
+              <p class="tm-home-text">
+                Parallo is a landing page template based on Bootstrap v4.3.1 framework. Please tell your friends about TemplateMo. Thank you.
+              </p>
+              <a href="#tmFeatures" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="tm-home-right">
+              <img src="img/mobile-screen.png" alt="App on Mobile mockup" />
+            </div>
+          </div>
+        </section>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="text/javascript" src="./js/web3.min.js"></script>
-	<script type="text/javascript" src="./js/ethereumjs-tx-1.3.3.min.js"></script>
-	<script src="http://code.jquery.com/jquery-latest.js "></script>
-	<script type="text/javascript" src="./js/qrcode.js"></script>
+        <!-- Features -->
+        <div class="row" id="tmFeatures">
+          <div class="col-lg-4">
+            <div class="tm-bg-white-transparent tm-feature-box">
+            <h3 class="tm-feature-name">High Performance</h3>
+            
+            <div class="tm-feature-icon-container">
+                <i class="fas fa-3x fa-server"></i>
+            </div>
 
-	<!-- bootsrtap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+            <p class="text-center">Download and use this layout for your sites. Total 5 HTML pages included.</p>
+            </div>
+          </div>
 
-	<title>Blanchedal Wallet</title>
+          <div class="col-lg-4">
+            <div class="tm-bg-white-transparent tm-feature-box">
+                <h3 class="tm-feature-name">Fast Support</h3>
 
-	<script>
-		$(document).ready(function () {
-			let DEBUG = 1;
-					
-			const web3 = new Web3('https://ropsten.infura.io/v3/3c52917848e945229c0d33d632b10490');
-			// const~ == TestNet(Full node가 있는)에 접속 하겠다
-			let Buffer = ethereumjs.Buffer.Buffer;
-			let version = web3.version;
+                <div class="tm-feature-icon-container">
+                    <i class="fas fa-3x fa-headphones"></i>
+                </div>
+                <p class="text-center">You are allowed to use this for commercial purpose or personal site.
+                </p>
+            </div>
+          </div>
 
-			if (DEBUG) {
-				console.log('starting...');
-				console.log("Ropsten Ethereum API version : ", version);
-				console.log("web3: ", web3);
-			}
-			
+          <div class="col-lg-4">
+            <div class="tm-bg-white-transparent tm-feature-box">
+                <h3 class="tm-feature-name">App Marketing</h3>
 
-			let qrcode = new QRCode(document.getElementById("qrcode"), {
-				width : 250,
-				height : 250
-			});
+                <div class="tm-feature-icon-container">
+                    <i class="fas fa-3x fa-satellite-dish"></i>
+                </div>
+                <p class="text-center">You are NOT allowed to redistribute this template on any download site.
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- Call to Action -->
+        <section class="row" id="tmCallToAction">
+          <div class="col-12 tm-call-to-action-col">
+            <img src="img/call-to-action.jpg" alt="Image" class="img-fluid tm-call-to-action-image" />
+            <div class="tm-bg-white tm-call-to-action-text">
+              <h2 class="tm-call-to-action-title">Images by Unsplash</h2>
+              <p class="tm-call-to-action-description">
+                You may browse <a rel="nofollow" href="https://www.toocss.com">Too CSS</a> website for the collection of CSS templates for your projects. Aliquam erat volutpat. Nulla eros est,
+                imperdiet vel feugiat non, ullamcorper mattis nulla.
+              </p>
+              <form action="#" method="get" class="tm-call-to-action-form">                
+                <input name="email" type="email" class="tm-email-input" id="email" placeholder="Email" />
+                <button type="submit" class="btn btn-secondary">Get Updates</button>
+              </form>
+            </div>
+          </div>
+        </section>
 
-			
-			
-			$('#coin').on('click', async function () {  // 전송 버튼
-			// 값 4개 받아오기
-				let fromaddress = $("#fromaddress").val();  
-				let toaddress = $("#toaddress").val();
-				let amount = $("#sendcoin").val();
-				let myPrivateKey = $("#passwd").val();
-			
-				// 밑에서 사용될 변수 이름 = id 이름
-			
-				const privateKey = Buffer.from(myPrivateKey, 'hex');
-				if (DEBUG) console.log("privateKey: ", privateKey);
+        <!-- Page footer -->
+        <footer class="row">
+          <p class="col-12 text-white text-center tm-copyright-text">
+            Copyright &copy; 2020 App Landing Page. 
+            Designed by <a href="#" class="tm-copyright-link">TemplateMo</a>
+          </p>
+        </footer>
+      </div>
+      <!-- .container-fluid -->
+    </div>
 
-				web3.eth.getTransactionCount(fromaddress, (err, txCount) => {
-				// Build the transaction
-				const txObject = {
-				nonce: web3.utils.toHex(txCount),
-				to: toaddress,
-				value: web3.utils.toHex(web3.utils.toWei(amount, 'ether')),
-				gasLimit: web3.utils.toHex(21000),
-				gasPrice: web3.utils.toHex(web3.utils.toWei('10', 'gwei'))
-				 }
-
-				 // Sign the transaction
-				 const tx = new ethereumjs.Tx(txObject);
-				 tx.sign(privateKey);
-
-				 const serializedTx = tx.serialize()
-				 const raw = '0x' + serializedTx.toString('hex')
-
-				 // Broadcast the transaction
-				 web3.eth.sendSignedTransaction(raw, (err, txHash) => {
-				console.log('txHash:', txHash)
-				  // Now go check etherscan to see the transaction!
-				  })
-				})  // end of txbuilder
-
-			})
-			
-			$('#getBalance').on('click', async function () {  // 잔액조회 누른 경우
-
-				let fromaddress = $("#fromaddress").val(); // fromaddress에 들어가있는 value 값을 가지고 와라
-				
-				let getbalance = await web3.eth.getBalance(fromaddress);// 잔액조회 코드
-				let balance = web3.utils.fromWei(getbalance, "ether")
-
-
-				if (DEBUG) console.log("balance : ", balance + " ETH");
-				$('#message').text(" balance: " + balance + " ETH");	  // 메시지 창에 띄워라  밑에 메시지 부분에 뜬다
-			})
-			
-			
-			
-			
-			$('#newAccount').on('click', async function () { // 계정 생성 버튼을 누르면 아래 내용을 실행해라
-
-				let account = web3.eth.accounts.create();    // 전자 지갑 주소가 만들어진다
-
-				if (DEBUG) console.log("privateKey : ", account.privateKey);
-				if (DEBUG) console.log("account : ", account.address);
-
-				$('#fromaddress').val(account.address); // fromaddress에 전자지갑 주소를 추가한다
-				$('#passwd').val(account.address); // fromaddress에 전자지갑 주소를 추가한다
-				
-				let elText = document.getElementById("fromaddress");
-				qrcode.makeCode(elText.value); 	 // QR 코드 생성
-				
-				$('#message').text(" account: " + account.address);
-				alert("Account 생성이 완료 되었습니다..!!!" + account.address);
-				
-
-				// getting the value
-				// let fromaddress = $("#fromaddress").val();
-
-				// setting the value
-				// $("#fromaddress").val( "new value here" );
-
-				// <h5>송신처 <input id="fromaddress" size="45" placeholder="" ></input> </h5>
-				// <h5>수신처 <input id="toaddress" size="45" value="0x09BCeaC0A761E13f4e4F1461F0fD43dA25791588" placeholder=""></input> </h5>
-			})
-		})
-	</script>
-</head>
-
-<body>
-	<br>
-	<br>
-	<div class="container " role="main">
-		<h2><strong> 내 지갑 </strong></h2>
-		<div id="tablePlace"></div>
-		<button id="newAccount">계정 생성</button>
-		<button id="getBalance">잔액 조회</button>
-		<button id="coin">전   송</button>
-		<h5>송신처 <input id="fromaddress" size="45" placeholder="" value= "0x39F5966709f7aB4A124F98a479Af38F005818e9a"></input> </h5>
-		<h5>수신처 <input id="toaddress" size="45" placeholder=""></input> </h5>
-		<h5>코인  <input id="sendcoin" size="45" placeholder=""></input> </h5>
-		<h5>비밀번호 <input type="password" id="passwd" size="45" placeholder="" value = "cc607ee4c523b7fb88480e9aa96b141a7a27da8cf52c764f2f4847d1c66ae61c"></input> </h5>
-		<!-- type= "password"하면 비밀번호 숨기기 가능                          0x 지워도 상관없게 함-->
-	</div>
-	<br>
-	<br>
-	<div class="container " role="main">
-		<h4><strong> Message </strong></h4>
-		<div id="message"></div>
-		<div id="qrcode" style="width:250px; height:250px; margin-top:15px;"></div>
-	</div>
-	<hr>
-	<footer class="py-5 bg-dark">
-		<div class="container">
-			<p class="m-0 text-center text-white"><b>copyright ⓒ Sunstar, Since 2015 . All Rights Reserved. </b></p>
-		</div>
-	</footer>
-</body>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
